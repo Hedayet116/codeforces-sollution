@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main(){
+        ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    long long m,e,b,minv;
+    cin>>e>>m>>b;
+    minv=min(min(m,e),b);
+    m-=minv;
+    e-=minv;
+    b-=minv;
+    if(e>1&&b>0){
+        minv+=min(e/2,b);
+    }
+    cout<<minv<<endl;
+    
+    return 0;
+};
